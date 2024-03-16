@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="script.js" defer></script>
     <style>
         *{
             margin:0;
             box-sizing: border-box;
-
+            overflow: hidden;
         }
 
         body{
@@ -42,14 +44,28 @@
 
         }
 
-       ul > li{
+       content{
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
         
-       
-       }
+        flex-grow: 1;
+        }
 
+        content > sidebar-left, sidebar-right{
+            width: 15%;
 
+            background-color: green;
+        }
+        content > button{
+            align-self: center;
+        }
+    
        footer{
-        padding: 20px;
+        transform: translateY(200%);
+        height: 15%;
+
 
         background-color: blue;
         
@@ -60,30 +76,18 @@
 <body>
     <header>
         <ul>
-            <li>
-                Link 1
-            </li>
-            <li>
-                Link 2
-            </li>
-            <li>
-                Link 3
-            </li>
+            <li> Link 1</li>
+            <li> Link 2</li>
+            <li> Link 3</li>
         </ul>
     </header>
+    
     <content>
-        <sidebar-left>
-
-        </sidebar-left>
-        <button>
-            Reverse!
-        </button>
-        <sidebar-right>
-
-        </sidebar-right>
+        <sidebar-left></sidebar-left>
+        <button> Reverse!</button>
+        <sidebar-right></sidebar-right>
     </content>
-    <footer>
 
-    </footer>
+    <footer></footer>
 </body>
 </html>
