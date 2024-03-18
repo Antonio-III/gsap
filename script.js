@@ -1,3 +1,5 @@
+// --- GSAP 1 ---
+
 // animation 1: the red box BOUNCES on the way to its target destination.
 // 100% refers to its height
 // gsap.from("header", {duration: 1, y: "-100%", ease: "bounce", })
@@ -50,5 +52,18 @@ button.addEventListener("click", () => {
     timeline.reverse()
     })
 
-// Code above this line is part of `GSAP 1`.
-// Code below this line is part of `Section 2`
+// --- END OF GSAP 1 ---
+
+// --- GSAP 2 ---
+
+// `toggleActions` positional args: (1 - when it enters the viewport due to scrolling down) (2 - when it exits the viewport due to scrolling down) (3 - when it enters the viewport due to scrolling up) (4 - when it exits the viewport???)
+gsap.to(".c", {scrollTrigger: {
+    trigger: ".c", 
+    toggleActions: "restart pause reverse pause",
+    
+}, 
+
+x:400, rotation: 360, duration:3
+
+}
+)
